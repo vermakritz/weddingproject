@@ -15,7 +15,7 @@ export function Portfolio() {
     { url: "/images /MS_08161.avif", category: "reception", title: "First Dance" },
     { url: "/images /MS_08174.avif", category: "ceremony", title: "Outdoor Ceremony" },
     { url: "/images /SAN03413.JPG", category: "details", title: "Floral Arrangements" },
-    { url: "/images /Adobe Express - file (1).jpg", category: "reception", title: "Reception Setup" },
+    { url: "/images /SAN03416 (1).avif", category: "reception", title: "Reception Setup" },
     { url: "/images /SAN03204.avif", category: "couples", title: "Romantic Moments" },
     { url: "/images /SAN03366_1.avif", category: "couples", title: "Elegant Venue" },
     { url: "/images /MS_08195.avif", category: "details", title: "Detail Shots" },

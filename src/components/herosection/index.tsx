@@ -93,7 +93,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: 'url("/images /Adobe Express - file (1).jpg")',
+            backgroundImage: 'url("/images /SAN03416 (1).avif")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundColor: "#000",
