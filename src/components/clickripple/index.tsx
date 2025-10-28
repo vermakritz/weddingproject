@@ -43,9 +43,9 @@ export function ClickRipple() {
             initial={{ scale: 0, opacity: 0.6 }}
             animate={{ scale: 3, opacity: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 2.8, ease: "easeOut" }}
           >
-            <div className="w-20 h-20 -ml-10 -mt-10 rounded-full border-4 border-pink-500" />
+            <div className="w-30 h-20 -ml-10 -mt-10 rounded-full border-7 border-pink-900" />
           </motion.div>
         ))}
       </AnimatePresence>
