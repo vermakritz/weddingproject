@@ -137,7 +137,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                color: isScrolled ? "#111827" : "#fff",
+                color: isScrolled ? "#111827" : "#000000",
               }}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

@@ -46,27 +46,56 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
       />
 
       {/* Background Image */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: 'url("/images /SAN03413.JPG")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <motion.div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), rgba(0,0,0,0.7))",
-          }}
-          animate={{ opacity: [0.7, 0.5, 0.7] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-      </div>
+     {/* Optimized Background with Blur + Fade-in */}
+<div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+  {/* Low-res blurred background (shows instantly) */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      backgroundImage: 'url("/images /Adobe Express - file (1).jpg")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundColor: "#000",
+
+      filter: "blur(15px)",
+      transform: "scale(1.05)",
+      transition: "opacity 0.6s ease-out",
+      zIndex: 1,
+    }}
+  />
+
+  {/* High-res image (fades in smoothly after load) */}
+  <img
+    src="/images /SAN03416.JPG" // ← your original image
+    alt="Wedding Hero"
+    onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      opacity: 0,
+      transition: "opacity 1s ease-in",
+      zIndex: 2,
+    }}
+  />
+
+  {/* Optional dark gradient overlay */}
+  <motion.div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5), rgba(0,0,0,0.7))",
+      zIndex: 3,
+    }}
+    animate={{ opacity: [0.7, 0.5, 0.7] }}
+    transition={{ duration: 4, repeat: Infinity }}
+  />
+</div>
+
 
       {/* Floating Icons */}
       {mounted && (
@@ -76,6 +105,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
             inset: 0,
             pointerEvents: "none",
             overflow: "hidden",
+            zIndex: 5, 
           }}
         >
           {[...Array(20)].map((_, i) => {

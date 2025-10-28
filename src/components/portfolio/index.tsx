@@ -10,15 +10,15 @@ export function Portfolio() {
   // 🖼️ Add your own images here
   // You can place them in /public/images or import them directly
   const portfolioItems = [
-    { url: "/images /MS_00003.jpeg", category: "ceremony", title: "Bridal Elegance" },
-    { url: "/images /MS_08066.jpeg", category: "details", title: "Wedding Rings" },
-    { url: "/images /MS_08161.jpeg", category: "reception", title: "First Dance" },
-    { url: "images /MS_08174.jpeg", category: "ceremony", title: "Outdoor Ceremony" },
+    { url: "/images /MS_00003.avif", category: "ceremony", title: "Bridal Elegance" },
+    { url: "/images /MS_08066.avif", category: "details", title: "Wedding Rings" },
+    { url: "/images /MS_08161.avif", category: "reception", title: "First Dance" },
+    { url: "/images /MS_08174.avif", category: "ceremony", title: "Outdoor Ceremony" },
     { url: "/images /SAN03413.JPG", category: "details", title: "Floral Arrangements" },
-    { url: "/images /SAN03416.JPG", category: "reception", title: "Reception Setup" },
-    { url: "/images /SAN03204.JPG", category: "couples", title: "Romantic Moments" },
-    { url: "/images /SAN03366.JPG", category: "couples", title: "Elegant Venue" },
-    { url: "/images /MS_08195.jpeg", category: "details", title: "Detail Shots" },
+    { url: "/images /Adobe Express - file (1).jpg", category: "reception", title: "Reception Setup" },
+    { url: "/images /SAN03204.avif", category: "couples", title: "Romantic Moments" },
+    { url: "/images /SAN03366_1.avif", category: "couples", title: "Elegant Venue" },
+    { url: "/images /MS_08195.avif", category: "details", title: "Detail Shots" },
   ];
 
   const filters = [
