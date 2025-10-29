@@ -249,22 +249,25 @@ export function Contact({ onBookingClick }: ContactProps) {
                       needs. Schedule a free consultation with our team today!
                     </p>
                     <button
-                      onClick={onBookingClick}
-                      style={{
-                        backgroundColor: "#fff",
-                        color: "#db2777",
-                        padding: "1.25rem 2rem",
-                        borderRadius: "1rem",
-                        fontSize: "1.125rem",
-                        fontWeight: 600,
-                        border: "none",
-                        cursor: "pointer",
-                        boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-                        width: "100%",
-                      }}
-                    >
-                      Book Free Consultation
-                    </button>
+  onClick={() => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLScF7TP6y4nytPfCL-boOCnOOE__3qJ8Trmp0wg26iL66xt4Ww/viewform?usp=publish-editor");
+  }}
+  style={{
+    backgroundColor: "#fff",
+    color: "#db2777",
+    padding: "1.25rem 2rem",
+    borderRadius: "1rem",
+    fontSize: "1.125rem",
+    fontWeight: 600,
+    border: "none",
+    cursor: "pointer",
+    boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+    width: "100%",
+  }}
+>
+  Book Free Consultation
+</button>
+
                   </div>
                 </div>
 
