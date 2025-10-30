@@ -81,7 +81,7 @@ export function Navigation({ onBookingClick }: NavigationProps) {
       transition: "color 0.3s",
     }}
   >
-   <i> Mahadev <span style={{ color: "#db2777" }}>Studio</span></i>
+   <i> Mahadev <span style={{ color: "#db2777" }}>Studio Photography</span></i>
   </span>
 </motion.a>
 
@@ -107,7 +107,9 @@ export function Navigation({ onBookingClick }: NavigationProps) {
 
               {/* Book Now Button */}
               <button
-                onClick={onBookingClick}
+                onClick={() => {
+                  window.open("https://docs.google.com/forms/d/e/1FAIpQLScF7TP6y4nytPfCL-boOCnOOE__3qJ8Trmp0wg26iL66xt4Ww/viewform?usp=publish-editor");
+                }}
                 style={{
                   padding: "0.5rem 1rem",
                   borderRadius: "0.5rem",

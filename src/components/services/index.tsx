@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Camera, Video, Image, Film, Users, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
 
-export function Services() {
+export default function Services() {
   const services = [
     {
       icon: Camera,
@@ -14,7 +15,7 @@ export function Services() {
         "Professional Editing",
         "Raw Files Included",
       ],
-      gradient: "linear-gradient(to bottom right, #ec4899, #db2777)", // pink-500 to pink-600
+      gradient: "linear-gradient(to bottom right, #ec4899, #db2777)",
     },
     {
       icon: Video,
@@ -27,7 +28,7 @@ export function Services() {
         "Same-Day Edit",
         "Highlight Reel",
       ],
-      gradient: "linear-gradient(to bottom right, #ef4444, #dc2626)", // red-500 to red-600
+      gradient: "linear-gradient(to bottom right, #ef4444, #dc2626)",
     },
     {
       icon: Image,
@@ -40,7 +41,7 @@ export function Services() {
         "Multiple Looks",
         "Digital & Print",
       ],
-      gradient: "linear-gradient(to bottom right, #db2777, #ef4444)", // pink-600 to red-500
+      gradient: "linear-gradient(to bottom right, #db2777, #ef4444)",
     },
     {
       icon: Film,
@@ -53,7 +54,7 @@ export function Services() {
         "Cultural Events",
         "Reception Party",
       ],
-      gradient: "linear-gradient(to bottom right, #dc2626, #db2777)", // red-600 to pink-600
+      gradient: "linear-gradient(to bottom right, #dc2626, #db2777)",
     },
     {
       icon: Users,
@@ -66,7 +67,7 @@ export function Services() {
         "Videographer",
         "Assistant Team",
       ],
-      gradient: "linear-gradient(to bottom right, #ec4899, #ef4444)", // pink-500 to red-500
+      gradient: "linear-gradient(to bottom right, #ec4899, #ef4444)",
     },
     {
       icon: Clock,
@@ -79,7 +80,7 @@ export function Services() {
         "60 Days Video",
         "Express Options",
       ],
-      gradient: "linear-gradient(to bottom right, #ef4444, #ec4899)", // red-500 to pink-500
+      gradient: "linear-gradient(to bottom right, #ef4444, #ec4899)",
     },
   ];
 
@@ -93,7 +94,16 @@ export function Services() {
       }}
     >
       {/* Decorative elements */}
-      <div
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         style={{
           position: "absolute",
           top: "40px",
@@ -103,10 +113,19 @@ export function Services() {
           backgroundColor: "#fbcfe8",
           borderRadius: "50%",
           filter: "blur(60px)",
-          opacity: 0.2,
         }}
-      ></div>
-      <div
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
         style={{
           position: "absolute",
           bottom: "40px",
@@ -116,9 +135,8 @@ export function Services() {
           backgroundColor: "#fecaca",
           borderRadius: "50%",
           filter: "blur(60px)",
-          opacity: 0.2,
         }}
-      ></div>
+      />
 
       <div
         style={{
@@ -157,7 +175,10 @@ export function Services() {
               fontSize: "2.5rem",
               color: "#111827",
               marginBottom: "12px",
-              fontWeight: 700,
+              fontWeight: 800,
+              fontStyle: "italic",
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              letterSpacing: "0.5px",
             }}
           >
             Our Services
@@ -205,7 +226,6 @@ export function Services() {
                     paddingLeft: "42px",
                     paddingTop: "12px",
                     paddingRight: "42px",
-                    // paddingBottom: "40px",
                     boxShadow:
                       "0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.03)",
                     border: "2px solid #fce7f3",
@@ -221,7 +241,7 @@ export function Services() {
                 >
                   {/* Icon */}
                   <motion.div
-                    whileHover={{ rotate: 360 }}
+                    whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                     style={{
                       width: "64px",
@@ -233,9 +253,30 @@ export function Services() {
                       justifyContent: "center",
                       marginBottom: "24px",
                       boxShadow: "0 6px 16px rgba(0, 0, 0, 0.1)",
+                      position: "relative",
                     }}
                   >
                     <Icon size={32} color="white" />
+                    
+                    {/* Animated pulse ring */}
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.3, 1],
+                        opacity: [0.4, 0, 0.4],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeOut",
+                      }}
+                      style={{
+                        position: "absolute",
+                        inset: -8,
+                        borderRadius: "50%",
+                        background: service.gradient,
+                        opacity: 0.4,
+                      }}
+                    />
                   </motion.div>
 
                   {/* Title */}

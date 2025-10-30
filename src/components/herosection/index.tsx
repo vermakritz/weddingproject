@@ -248,7 +248,7 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            MAHADEV STUDIO
+            MAHADEV STUDIO PHOTOGRAPHY
           </motion.h2>
 
           <motion.h1
@@ -313,7 +313,9 @@ export function HeroSection({ onBookingClick }: HeroSectionProps) {
           >
             <MagneticButton strength={20}>
               <Button
-                onClick={onBookingClick}
+               onClick={() => {
+                window.open("https://docs.google.com/forms/d/e/1FAIpQLScF7TP6y4nytPfCL-boOCnOOE__3qJ8Trmp0wg26iL66xt4Ww/viewform?usp=publish-editor");
+              }}
                 style={{
                   background: "linear-gradient(to right, #db2777, #dc2626)",
                   color: "#fff",

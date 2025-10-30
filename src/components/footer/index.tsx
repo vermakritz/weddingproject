@@ -78,12 +78,48 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
-              <Camera size={32} style={{ color: "#db2777" }} />
-              <span style={{ fontSize: "1.5rem", fontWeight: "600" }}>
-                Mahadev <span style={{ color: "#f472b6" }}>Studio</span>
-              </span>
-            </div>
+            <div
+  style={{
+    maxWidth: "1280px",
+    margin: "0 auto",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  }}
+>
+  {/* Logo and Title */}
+  <motion.a
+    href="#"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "0.75rem",
+      textDecoration: "none",
+    }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <img
+      src="/images /web_logo.png"
+      alt="Mahadev Studio Logo"
+      style={{
+        width: "50px",
+        height: "50px",
+        objectFit: "contain",
+      }}
+    />
+    <span
+      style={{
+        fontSize: "1.5rem",
+        fontWeight: "600",
+        color: "white", // Mahadev in white
+      }}
+    >
+      Mahadev{" "}
+      <span style={{ color: "#f472b6" }}>Studio Photography</span>
+    </span>
+  </motion.a>
+</div>
+
             <p style={{ color: "#9ca3af", marginBottom: "1.5rem", lineHeight: 1.6 }}>
               Professional wedding photography and videography services,
               capturing your forever moments with passion and creativity.

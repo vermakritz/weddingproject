@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Toaster } from "./components/ui/sonner";
 import { Navigation } from "./components/navigation";
 import { HeroSection } from "./components/herosection";
-import { Services } from "./components/services";
+import  Services  from "./components/services";
 import { Portfolio } from "./components/portfolio";
 import { Packages } from "./components/packages";
 import { About } from "./components/about";
