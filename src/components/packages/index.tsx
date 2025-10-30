@@ -253,7 +253,9 @@ export function Packages({ onBookingClick }: PackagesProps) {
                   </ul>
 
                   <button
-                    onClick={onBookingClick}
+                     onClick={() => {
+                      window.open("https://docs.google.com/forms/d/e/1FAIpQLScF7TP6y4nytPfCL-boOCnOOE__3qJ8Trmp0wg26iL66xt4Ww/viewform?usp=publish-editor");
+                    }}
                     style={{
                       width: "100%",
                       padding: "1.5rem",
